@@ -8,6 +8,7 @@ import remarkBreaks from 'remark-breaks'
 interface Props {
   data: string | undefined
   openAsText: (file: File) => void
+  setData: (content: string) => void
 }
 const FormatMarkdown: React.FC<Props> = (props) => {
   const [file, setFile] = useState<File>()
@@ -29,6 +30,9 @@ const FormatMarkdown: React.FC<Props> = (props) => {
         <input
           type="file" accept=".md"
           onChange={e => setFile(e.target.files?.[0])} />
+      </p>
+      <p>
+        <MarkdownDirectInput placeholder="## Markdown content ..." onChange={e => props.setData(e.target.value)} />
       </p>
 
       <h2>Output</h2>
@@ -56,4 +60,10 @@ const PrintArea = styled.section`
       max-width: 100%;
     }
   }
+`
+
+const MarkdownDirectInput = styled.textarea`
+  width: 100%;
+  resize: vertical;
+  min-height: 10em;
 `
