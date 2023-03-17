@@ -9,6 +9,7 @@ import GlobalStyle from './GlobalStyle'
 
 import App from './containers/App'
 import FormatMarkdown from './containers/tools/FormatMarkdown'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 
 const Root: React.FC = () => (<>
   <Outlet />
@@ -41,6 +42,8 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <ResetStyle />
     <GlobalStyle />
-    <RouterProvider router={router} />
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
   </React.StrictMode>,
 )

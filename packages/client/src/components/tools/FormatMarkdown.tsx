@@ -11,6 +11,7 @@ interface Props {
 }
 const FormatMarkdown: React.FC<Props> = (props) => {
   const [file, setFile] = useState<File>()
+
   const onChangeFile = () => {
     if (!file) return
     props.openAsText(file)
