@@ -27,6 +27,9 @@ const LayoutContainer = styled.div`
   grid-template-rows: auto 1fr auto;
 
   @media print {
+    @page {
+      margin: 1cm;
+    }
     grid-template-rows: auto;
   }
 `

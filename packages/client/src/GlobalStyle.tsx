@@ -10,8 +10,9 @@ const GlobalStyle = createGlobalStyle`
   }
   
   p, table,
+  ul, ol,
   h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     &:last-child {
       margin-bottom: 0;
     }
@@ -21,6 +22,9 @@ const GlobalStyle = createGlobalStyle`
     font-weight: bold;
   }
   
+  ul, ol {
+    padding-left: 2em;
+  }
   h1 {
     font-size: 2em;
   }
