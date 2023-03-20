@@ -1,8 +1,12 @@
 import styled from 'styled-components'
 
+import LogotypeSVG from '../../../assets/logotype.svg'
+
 const HeaderComponent: React.FC = () => (
   <HeaderContainer>
-    <BrandSection>IrisTools</BrandSection>
+    <BrandSection>
+      <Logotype src={LogotypeSVG} />
+    </BrandSection>
     <NavSection>.nav</NavSection>
   </HeaderContainer>
 )
@@ -30,4 +34,9 @@ const NavSection = styled.nav`
   display: flex;
   flex-flow: column;
   align-items: flex-end;
+`
+const Logotype = styled.img`
+  width: auto;
+  height: 18px;
+  vertical-align: bottom;
 `
