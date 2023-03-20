@@ -6,14 +6,8 @@ const Main = styled.main`
     padding: 20px;
   }
   @media print {
-    margin-top: 0.5cm;
+    margin: 0;
     padding: 0;
-    padding-top: 0.25cm;
-    border-top: 1px solid #000000;
-
-    * {
-      color: #000000;
-    }
   }
 `
 export default Main
