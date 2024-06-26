@@ -2,8 +2,9 @@ import { Outlet, RouterProvider, ScrollRestoration, createBrowserRouter } from '
 import ResetStyle from '../styles/ResetStyle'
 import GlobalStyle from '../styles/GlobalStyle'
 import { HelmetProvider } from 'react-helmet-async'
-import MarkdownFormatPage from './MarkdownFormatPage/MarkdownFormatPage'
 import IndexPage from './IndexPage/IndexPage'
+import MarkdownFormatPage from './MarkdownFormatPage/MarkdownFormatPage'
+import CircleCutGeneratePage from './CircleCutGeneratePage/CircleCutGeneratePage'
 
 const Root: React.FC = () => (<>
   <Outlet />
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
           {
             path: 'format-markdown',
             element: <MarkdownFormatPage />
+          },
+          {
+            path: 'generate-circlecut',
+            element: <CircleCutGeneratePage />
           }
         ]
       }
