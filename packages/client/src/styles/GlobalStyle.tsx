@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   body {
-    font-family: system-ui, sans-serif;
+    font-family: 'Noto Sans JP';
   }
 
   html, body, #root {

@@ -1,14 +1,15 @@
 import styled from 'styled-components'
 
 import LogotypeSVG from '../../assets/logotype.svg'
+import { Link } from 'react-router-dom'
 
 const HeaderComponent: React.FC = () => {
   return (
     <HeaderContainer>
       <BrandSection>
-        <Logotype src={LogotypeSVG} />
+        <Link to="/">IrisTools</Link>
       </BrandSection>
-      <NavSection>.nav</NavSection>
+      <NavSection></NavSection>
     </HeaderContainer>
   )
 }
@@ -31,7 +32,12 @@ const HeaderContainer = styled.header`
     display: none;
   }
 `
-const BrandSection = styled.section``
+const BrandSection = styled.section`
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+`
 const NavSection = styled.nav`
   display: flex;
   flex-flow: column;

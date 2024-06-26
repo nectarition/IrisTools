@@ -14,9 +14,11 @@ const CircleCutGeneratePage: React.FC = () => {
   const handleDownload = useCallback(() => {
     if (!canvasRef.current) return
 
+    const now = new Date()
+
     const download = document.createElement('a')
     download.href = canvasRef.current.toDataURL('image/png')
-    download.download = 'circlecut.png'
+    download.download = `circlecut-${now.getTime()}.png`
     download.click()
   }, [])
 
@@ -60,10 +62,13 @@ const CircleCutGeneratePage: React.FC = () => {
   }, [templateImage, circleName])
 
   return (
-    <DefaultLayout title="サークルカット生成">
+    <DefaultLayout title="CircleCutGeneratePage">
       <h1>CircleCutGeneratePage</h1>
       <p>
         <CircleCutCanvas ref={canvasRef} />
+      </p>
+      <p>
+        半角文字を使うと左に寄りがちになります
       </p>
       <textarea
         value={circleName}

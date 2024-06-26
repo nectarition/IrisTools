@@ -1,10 +1,13 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const HeaderComponent: React.FC = () => {
   return (
     <HeaderContainer>
-      <BrandSection>IrisTools</BrandSection>
-      <NavSection>.nav</NavSection>
+      <BrandSection>
+        <Link to="/">IrisTools</Link>
+      </BrandSection>
+      <NavSection></NavSection>
     </HeaderContainer>
   )
 }
@@ -23,7 +26,12 @@ const HeaderContainer = styled.header`
     padding: 10px;
   }
 `
-const BrandSection = styled.section``
+const BrandSection = styled.section`
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+`
 const NavSection = styled.nav`
   display: flex;
   flex-flow: column;

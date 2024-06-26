@@ -27,7 +27,7 @@ const MarkdownFormatPage: React.FC = () => {
   return (
     <PrintLayout title={fileName}>
       <NotPrintArea>
-        <h1>Format Markdown</h1>
+        <h1>MarkdownFormatPage</h1>
 
         <p>
           Markdownをいい感じに整形します。
