@@ -39,7 +39,6 @@ const MarkdownFormatPage: React.FC = () => {
         </p>
         <p>
           <MarkdownDirectInput
-            placeHolder="## Markdown content ..."
             onChange={e => setContent(e.target.value)} />
         </p>
 
