@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 
-const HeaderComponent: React.FC = () => (
-  <HeaderContainer>
-    <BrandSection>IrisTools</BrandSection>
-    <NavSection>.nav</NavSection>
-  </HeaderContainer>
-)
+const HeaderComponent: React.FC = () => {
+  return (
+    <HeaderContainer>
+      <BrandSection>IrisTools</BrandSection>
+      <NavSection>.nav</NavSection>
+    </HeaderContainer>
+  )
+}
 
 export default HeaderComponent
 

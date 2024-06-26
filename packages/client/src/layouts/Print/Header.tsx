@@ -1,15 +1,17 @@
 import styled from 'styled-components'
 
-import LogotypeSVG from '../../../assets/logotype.svg'
+import LogotypeSVG from '../../assets/logotype.svg'
 
-const HeaderComponent: React.FC = () => (
-  <HeaderContainer>
-    <BrandSection>
-      <Logotype src={LogotypeSVG} />
-    </BrandSection>
-    <NavSection>.nav</NavSection>
-  </HeaderContainer>
-)
+const HeaderComponent: React.FC = () => {
+  return (
+    <HeaderContainer>
+      <BrandSection>
+        <Logotype src={LogotypeSVG} />
+      </BrandSection>
+      <NavSection>.nav</NavSection>
+    </HeaderContainer>
+  )
+}
 
 export default HeaderComponent
 

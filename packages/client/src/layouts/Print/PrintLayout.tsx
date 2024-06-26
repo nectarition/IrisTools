@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import HeadHelper from '../../../libs/Helmet'
+import HeadHelper from '../../libs/Helmet'
 
 import Footer from '../Print/Footer'
 import Header from '../Print/Header'
@@ -11,16 +11,18 @@ interface Props {
   title?: string
 }
 
-const PrintLayout: React.FC<Props> = (props) => (
-  <LayoutContainer>
-    <HeadHelper title={props.title} />
-    <Header />
-    <Main>
-      {props.children}
-    </Main>
-    <Footer />
-  </LayoutContainer>
-)
+const PrintLayout: React.FC<Props> = (props) => {
+  return (
+    <LayoutContainer>
+      <HeadHelper title={props.title} />
+      <Header />
+      <Main>
+        {props.children}
+      </Main>
+      <Footer />
+    </LayoutContainer>
+  )
+}
 
 export default PrintLayout
 

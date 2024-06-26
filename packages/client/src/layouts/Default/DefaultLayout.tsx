@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import HeadHelper from '../../../libs/Helmet'
+import HeadHelper from '../../libs/Helmet'
 
 import Header from './Header'
 import Main from './Main'
@@ -11,16 +11,18 @@ interface Props {
   title?: string
 }
 
-const DefaultLayout: React.FC<Props> = (props) => (
-  <LayoutContainer>
-    <HeadHelper title={props.title} />
-    <Header />
-    <Main>
-      {props.children}
-    </Main>
-    <Footer />
-  </LayoutContainer>
-)
+const DefaultLayout: React.FC<Props> = (props) => {
+  return (
+    <LayoutContainer>
+      <HeadHelper title={props.title} />
+      <Header />
+      <Main>
+        {props.children}
+      </Main>
+      <Footer />
+    </LayoutContainer>
+  )
+}
 
 export default DefaultLayout
 

@@ -1,10 +1,12 @@
 import styled from 'styled-components'
 
-const FooterComponent: React.FC = () => (
-  <FooterContainer>
-    &copy; 2023 Nectarition
-  </FooterContainer>
-)
+const FooterComponent: React.FC = () => {
+  return (
+    <FooterContainer>
+      &copy; 2023 Nectarition
+    </FooterContainer>
+  )
+}
 
 export default FooterComponent
 
